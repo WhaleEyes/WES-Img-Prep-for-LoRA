@@ -1,7 +1,7 @@
 # WES-Image-Preprocessor
 
 A **bilingual (Chinese/English)** desktop tool for batch preprocessing image datasets for **Stable Diffusion LoRA training**.  
-It converts, resizes, crops, and renames images with a focus on **safety**, **resumability**, and **ease of use**.
+It converts, resizes, crops, 和 renames images with a focus on **safety**, **resumability**, and **ease of use**.
 
 ## ✨ Core Features
 
@@ -14,6 +14,10 @@ It converts, resizes, crops, and renames images with a focus on **safety**, **re
 - 🌐 **Bilingual GUI** – Switch between Chinese and English instantly from the menu bar. The whole interface updates without restarting.
 - 📂 **Batch Processing** – Process multiple subfolders at once with clear per‑folder progress.
 - 📋 **Detailed Logs & Progress Bar** – See exactly what is happening in real time.
+
+## 📸 Screenshot
+![GUI Screenshot](screenshots/gui.png)
+![GUI Screenshot](screenshots/gui_zh.png)
 
 ## 🚀 Quick Start
 
