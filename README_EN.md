@@ -3,6 +3,8 @@
 A **bilingual (Chinese/English)** desktop tool for batch preprocessing image datasets for **Stable Diffusion LoRA training**.  
 It converts, resizes, crops, 和 renames images with a focus on **safety**, **resumability**, and **ease of use**.
 
+[![中文](https://img.shields.io/badge/README-中文-red)](README.md)
+
 ## ✨ Core Features
 
 - 🖼 **Safe Format Conversion** – Converts all images to **WebP (85% quality)** while preserving untouched backups in the `originals` (or `原图`) folder.
