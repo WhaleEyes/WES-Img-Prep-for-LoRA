@@ -3,6 +3,8 @@
 一款**中英双语**的桌面图像预处理工具，专为 **Stable Diffusion LoRA 训练**设计。  
 在**安全备份**、**可中断续传**的前提下，实现格式转换、缩放、裁切与智能重命名。
 
+[![English](https://img.shields.io/badge/README-English-blue)](README_EN.md)
+
 ## ✨ 核心功能
 
 - 🖼 **安全格式转换** – 所有图片转为 **WebP (85%质量)**，同时在 `原图`（或 `originals`）文件夹保留完整备份。
