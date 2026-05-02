@@ -1,4 +1,4 @@
-# WES-Image-Preprocessor
+# WES-Image Preprocessor Tool
 
 A **bilingual (Chinese/English)** desktop tool for batch preprocessing image datasets for **Stable Diffusion LoRA training**.  
 It converts, resizes, crops, 和 renames images with a focus on **safety**, **resumability**, and **ease of use**.
@@ -30,3 +30,76 @@ It converts, resizes, crops, 和 renames images with a focus on **safety**, **re
 git clone https://github.com/WhaleEyes/WES-Img-prep-for-lora.git
 cd WES-Img-prep-for-lora
 pip install -r requirements.txt
+```
+
+#### Launch the GUI
+
+```bash
+python gui.py
+```
+
+#### Command Line (English)
+
+```bash
+python run_en.py /path/to/images --rename --sort desc --min 640 --max 1536 --step 64
+```
+
+#### Command Line (Chinese)
+
+```bash
+python run_zh.py /path/to/images --rename --sort asc
+```
+
+## 📖 How to Use
+
+### GUI
+
+1. Choose **Single Folder** or **Batch** mode.
+2. Fill in the crop rule fields (Min Resolution, Max Resolution, Step Size) and click **Save Rule**.
+3. Optionally enable **Auto Rename** and pick the sort order.
+4. Browse to the target folder (or a parent folder containing subfolders).
+5. Click **Start Processing**. The progress bar and log will show real‑time status.
+6. You can cancel at any time.
+
+### CLI Options
+
+```
+python run_en.py <folder> [options]
+
+Options:
+  --rename           Enable auto-rename (sorted by resolution)
+  --sort {asc,desc}  Sort order (default: asc)
+  --min <int>        Minimum side length (default: 512)
+  --max <int>        Maximum side length (default: 2048)
+  --step <int>       Alignment step (default: 64)
+```
+
+## 📁 Output Folder Structure
+
+After processing, your folder will look like:
+
+```
+your_folder/
+├── originals/ (or 原图/)   # Full WebP backups (never modified)
+├── lt512/                  # Images with short side < min_size (copied, not cropped)
+├── 512x512/                # Processed images grouped by final size
+├── 1024x1536/
+├── .process_rules          # Per‑folder saved rules (optional)
+└── config.json             # Global rule & language preferences (ignored by Git)
+```
+
+## 🔧 Dependencies
+
+- Python 3.8+
+- [Pillow](https://python-pillow.org/)
+- [send2trash](https://pypi.org/project/Send2Trash/)
+
+Install with:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
