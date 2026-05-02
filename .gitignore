@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+build/
+dist/
+
+# Virtual environment
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Local configuration
+config.json
+.process_rules
+
+# OS
+Thumbs.db
+.DS_Store
